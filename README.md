@@ -55,7 +55,7 @@ sf apex run test --result-format human --code-coverage
 
 - [x] Configuração do ambiente (CLI, VS Code, JDK, org)
 - [x] Primeiro Apex anônimo (variáveis, listas, loop, SOQL)
-- [ ] Primeira classe Apex + classe de teste
+- [x] Primeira classe Apex + classe de teste (100% de cobertura)
 - [ ] Triggers e o padrão *Trigger Handler*
 - [ ] SOQL avançado (relacionamentos, agregações)
 - [ ] Primeiro Lightning Web Component
