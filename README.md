@@ -1,7 +1,6 @@
-# ☁️ Salesforce Portfolio — Thiago Miranda
+# 🛒 CRM de Pedidos — Salesforce
 
-> Repositório de estudos e projetos no desenvolvimento da plataforma **Salesforce**.
-> Aqui registro minha evolução em **Apex**, **SOQL**, **Lightning Web Components (LWC)** e automações, no formato profissional **Salesforce DX**.
+> Projeto de portfólio: um **sistema de gestão de pedidos** (Sales Cloud) construído na plataforma Salesforce, com automações em Apex e interface em Lightning Web Components.
 
 ![Salesforce](https://img.shields.io/badge/Salesforce-00A1E0?style=flat&logo=salesforce&logoColor=white)
 ![Apex](https://img.shields.io/badge/Apex-1798c1?style=flat&logo=salesforce&logoColor=white)
@@ -9,58 +8,40 @@
 
 ---
 
-## 👤 Sobre
+## 🎯 Sobre o projeto
 
-Estou aprendendo desenvolvimento Salesforce do zero e uso este repositório para documentar a jornada com código real, versionado e deployável. Cada pasta reflete um conceito que estudei e pratiquei.
+Um CRM onde um cliente faz **pedidos**, cada pedido tem vários **itens** (produtos), e o sistema calcula automaticamente o **total** (com desconto e frete) quando os itens mudam. Construído para demonstrar, na prática, o desenvolvimento Salesforce ponta a ponta.
 
-## 🛠️ Stack & Ferramentas
+## 🧩 Funcionalidades (em construção)
 
-- **Apex** — linguagem server-side da plataforma (orientada a objetos, tipada)
-- **SOQL / SOSL** — consultas a dados do CRM
-- **Lightning Web Components (LWC)** — front-end moderno baseado em Web Components
-- **Salesforce DX + Salesforce CLI (`sf`)** — projeto baseado em fonte e versionado
-- **VS Code** + Salesforce Extension Pack
+- [ ] **Modelo de dados** — objetos `Pedido` e `Item do Pedido` com relacionamento
+- [ ] **Regras de validação** — ex.: quantidade não pode ser ≤ 0
+- [ ] **Automação em Apex** — trigger que recalcula o total do pedido ao alterar itens
+- [ ] **Testes automatizados** — cobertura ≥ 75%
+- [ ] **Interface (LWC)** — tela que lista os pedidos de um cliente
+- [ ] **Automação declarativa (Flow)** — notificação ao enviar um pedido
+- [ ] **Assistente de IA (Agentforce)** — agente que responde sobre os pedidos
 
-## 📁 Estrutura do projeto
+## 🛠️ Stack
 
-```
-force-app/main/default/
-├── classes/     → classes Apex e classes de teste (.cls)
-├── triggers/    → triggers de objetos (.trigger)
-├── lwc/         → componentes Lightning Web
-└── objects/     → objetos e campos customizados
-scripts/
-├── apex/        → experimentos em Apex anônimo
-└── soql/        → consultas SOQL de estudo
-docs/            → anotações de estudo por tópico
-```
+- **Apex** — lógica de negócio e triggers
+- **SOQL** — consultas aos dados
+- **Lightning Web Components** — front-end
+- **Flow / Agentforce** — automação e IA
+- **Salesforce DX + CLI** — projeto versionado
 
-## 🚀 Como rodar localmente
+## 🚀 Como rodar
 
 ```bash
-# 1. Autorizar sua org de desenvolvimento
+# autorizar a org de desenvolvimento
 sf org login web --alias minhaOrg --set-default
 
-# 2. Rodar um script de Apex anônimo
-sf apex run --file scripts/apex/hello.apex
-
-# 3. Fazer deploy do código para a org
+# fazer deploy do projeto para a org
 sf project deploy start
 
-# 4. Rodar os testes Apex
+# rodar os testes
 sf apex run test --result-format human --code-coverage
 ```
-
-## 📚 Trilha de aprendizado
-
-- [x] Configuração do ambiente (CLI, VS Code, JDK, org)
-- [x] Primeiro Apex anônimo (variáveis, listas, loop, SOQL)
-- [x] Primeira classe Apex + classe de teste (100% de cobertura)
-- [ ] Triggers e o padrão *Trigger Handler*
-- [ ] SOQL avançado (relacionamentos, agregações)
-- [ ] Primeiro Lightning Web Component
-- [ ] Integração via API REST
-- [ ] Certificação **Platform Developer I (PD1)**
 
 ## 🔗 Contato
 
@@ -68,4 +49,4 @@ sf apex run test --result-format human --code-coverage
 
 ---
 
-<sub>Projeto de estudos no formato Salesforce DX. As credenciais da org **não** são versionadas (ver `.gitignore`).</sub>
+<sub>Projeto de estudos no formato Salesforce DX. Credenciais não são versionadas (ver `.gitignore`).</sub>
