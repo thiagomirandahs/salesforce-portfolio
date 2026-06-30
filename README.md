@@ -14,7 +14,7 @@ Um CRM onde um cliente faz **pedidos**, cada pedido tem vários **itens** (produ
 
 ## 🧩 Funcionalidades (em construção)
 
-- [ ] **Modelo de dados** — objetos `Pedido` e `Item do Pedido` com relacionamento
+- [x] **Modelo de dados** — objetos `Pedido` e `Item do Pedido` com relacionamento
 - [ ] **Regras de validação** — ex.: quantidade não pode ser ≤ 0
 - [ ] **Automação em Apex** — trigger que recalcula o total do pedido ao alterar itens
 - [ ] **Testes automatizados** — cobertura ≥ 75%
